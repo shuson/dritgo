@@ -10,5 +10,16 @@ $(function(){
     });
 
     //search submit
-    
+    $("#find").click(function(){
+        var result = ($("#inputDateFrom").val() && $("#inputDateTo").val()) || false;
+        if(!result){
+            $("#dateFrom").addClass("requiredErr");
+            $("#dateTo").addClass("requiredErr");
+        }else{
+            $("#dateFrom").removeClass("requiredErr");
+            $("#dateTo").removeClass("requiredErr");
+        }
+        
+        return result;
+    });
 })
