@@ -4811,12 +4811,14 @@ button.close {
 #header {
   min-height: 100%;
   margin-top: 0;
-  position: absolute; }
+  position: absolute;
+  width: 100%; }
 
 #body {
   background: url("../../images/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
+  width: 100%;
   padding-top: 50px; }
 
 #footer {
