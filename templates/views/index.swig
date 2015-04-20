@@ -3,26 +3,28 @@
 {% block content %}
 	<div class="container">
         <h2 id="welcome">Welcome, look for a driver:</h2>
-        <div class='col-md-3 col-md-offset-3'>
-            <div class="form-group">    
-                <div class='input-group date' id='dateFrom'>
-                    <input type='text' class="form-control" placeholder="Date From" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+        <form action="/" method="POST">
+            <div class='col-md-3 col-md-offset-3'>
+                <div class="form-group">    
+                    <div class='input-group date' id='dateFrom'>
+                        <input id="inputDateFrom" type='text' class="form-control" placeholder="Date From" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class='col-md-3'>
-            <div class="form-group">
-                <div class='input-group date' id='dateTo'>
-                    <input type='text' class="form-control" placeholder="Date To" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='dateTo'>
+                        <input id="inputDateTo" type='text' class="form-control" placeholder="Date To" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <button class="btn btn-default">Find</button>
+            <button id="find" type="submit" class="btn btn-default">Find</button>
+        </form>
 	</div>
 {% endblock %}

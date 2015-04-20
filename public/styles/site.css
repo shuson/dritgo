@@ -4809,7 +4809,7 @@ button.close {
  }
 
 #header {
-  min-height: 100%;
+  min-height: 10%;
   margin-top: 0;
   position: absolute;
   width: 100%; }

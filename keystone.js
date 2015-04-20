@@ -94,7 +94,8 @@ keystone.set('email tests', require('./routes/emails'));
 // Configure the navigation bar in Keystone's Admin UI
 
 keystone.set('nav', {
-	'users': 'users'
+	'users': 'users',
+	'drivers': 'drivers'
 });
 
 // Start Keystone to connect to your database and initialise the web server
