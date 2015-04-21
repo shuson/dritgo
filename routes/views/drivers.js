@@ -11,27 +11,19 @@ exports = module.exports = function(req, res) {
     
     locals.dateFrom = req.body.dateFrom;
     locals.dateTo = req.body.dateTo;
-
-	locals.drivers = [];
 	
 	// Load the drivers
 	view.on('init', function(next) {
 		
-		var q = keystone.list('Driver').paginate({
-				page: req.query.page || 1,
- 				perPage: 10,
- 				maxPages: 10
-			})
-			.where('status', 'avaliable');
+		var q = keystone.list('Driver').model.find().where('avaliable', true);
 		
 		q.exec(function(err, results) {
+
 			locals.drivers = results;
 			next(err);
 		});
 		
 	});
-	console.log(locals.drivers.length);
 	// Render the view
 	view.render('drivers');
-	
 }

@@ -77,7 +77,7 @@
 
 		{# BODY #}
 		<div id="driver-body">
-            <div class="row">
+            <form class="row" action="/find" method="POST">
                 <div class='col-md-3 col-md-offset-3'> 
                     <div class='input-group date' id='dateFrom'>
                         <span class="input-group-addon">
@@ -101,14 +101,16 @@
                     </div>
                 </div>
                 <button id="find" type="submit" class="btn btn-default">Find</button>
-            </div>
+            </form>
 			<div id="dvDrivers" class="row">
-                <div class="col-lg-4" v-repeat="drivers">
-                  <img class="img-rounded" src="{{imgUrl}}" alt="Generic placeholder image" width="220" height="160">
-                  <h2>{{name}}</h2>
-                  <p>{{description}}</p>
+				{%- for driver in drivers -%}
+                <div class="col-lg-4">
+                  <img class="img-rounded" src="{{ driver.imgUrl }}" alt="Generic placeholder image" width="220" height="160">
+                  <h2>{{ driver.name.last }} {{ driver.name.first }}</h2>
+                  <p>{{ driver.description }}</p>
                   <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
                 </div>
+                {%- endfor %}
             </div>
 		</div>
 

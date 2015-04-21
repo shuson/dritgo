@@ -14,12 +14,13 @@ Driver.add({
     phone: { type: Types.Text, initial: true, required: true, index: true },
 	description: { type: Types.Textarea, initial: true },
     createdAt: { type: Date, default: Date.now },
-	videoUrl: { type: Types.Url, initial: true}
+    avaliable: { type: Types.Boolean, initial: true, required: true},
+	imgUrl: { type: Types.Url, initial: true}
 });
 
 /**
  * Registration
  */
 
-Driver.defaultColumns = 'name, email, phone, description, createdAt, videoUrl';
+Driver.defaultColumns = 'name, email, phone, description, avaliable, createdAt, imgUrl';
 Driver.register();

@@ -28,16 +28,32 @@ keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./views')
+	views: importRoutes('./views'),
+	apis: importRoutes('./apis')
 };
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
 	
+	// Allow cross-domain requests (development only)
+	if (process.env.NODE_ENV != 'production') {
+		console.log('------------------------------------------------');
+		console.log('Notice: Enabling CORS for development.');
+		console.log('------------------------------------------------');
+		app.all('*', function(req, res, next) {
+			res.header('Access-Control-Allow-Origin', '*');
+			res.header('Access-Control-Allow-Methods', 'GET, POST');
+			res.header('Access-Control-Allow-Headers', 'Content-Type');
+			next();
+		});
+	}
+
 	// Views
 	app.get('/', routes.views.index);
 	
 	app.post('/find', routes.views.drivers);
+
+	app.all('/driver', routes.apis['driver']);
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	
