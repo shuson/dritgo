@@ -18,7 +18,6 @@ exports = module.exports = function(req, res) {
 		var q = keystone.list('Driver').model.find().where('avaliable', true);
 		
 		q.exec(function(err, results) {
-
 			locals.drivers = results;
 			next(err);
 		});

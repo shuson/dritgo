@@ -15,12 +15,13 @@ Driver.add({
 	description: { type: Types.Textarea, initial: true },
     createdAt: { type: Date, default: Date.now },
     avaliable: { type: Types.Boolean, initial: true, required: true},
-	imgUrl: { type: Types.Url, initial: true}
+	imgUrl: { type: Types.CloudinaryImage, publicID: 'dritgo', folder: 'images/drivers/'},
+    videoUrl: {type: Types.Url, initial: true}
 });
 
 /**
  * Registration
  */
 
-Driver.defaultColumns = 'name, email, phone, description, avaliable, createdAt, imgUrl';
+Driver.defaultColumns = 'name, email, phone, description, avaliable, createdAt, imgUrl, videoUrl';
 Driver.register();

@@ -80,7 +80,7 @@
                         <span class="input-group-addon">
                             From: 
                         </span>
-                        <input id="inputDateFrom" type='text' class="form-control" placeholder="Date From" value="{{dateFrom}}" />
+                        <input id="inputDateFrom" type='text' class="form-control" name="dateFrom" placeholder="Date From" value="{{dateFrom}}" />
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -91,7 +91,7 @@
                         <span class="input-group-addon">
                             To: 
                         </span>
-                        <input id="inputDateTo" type='text' class="form-control" placeholder="Date To" value="{{dateTo}}" />
+                        <input id="inputDateTo" type='text' class="form-control" name="dateTo" placeholder="Date To" value="{{dateTo}}" />
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
@@ -101,13 +101,13 @@
             </form>
 			<div id="dvDrivers" class="row">
 				{%- for driver in drivers -%}
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
 					<div class="card hovercard">
 						<div class="cardheader">
 
 						</div>
 						<div class="avatar">
-							<img alt="avatar" src="{{ driver.imgUrl }}">
+							<img alt="avatar" src="{{ driver.imgUrl.url }}">
 						</div>
 						<div class="info">
 							<div class="title">
@@ -123,7 +123,7 @@
 								<i class="fa fa-envelope"></i>
 							</a>
 							<a class="btn circle-btn btn-primary btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email zxx">
-								<i class="fa fa-facebook"></i>
+								<i class="fa fa-youtube"></i>
 							</a>
 						</div>
 					</div>
@@ -171,6 +171,7 @@
 
 		{# Add scripts that are globally required by your site here. #}
             <script src="/js/driverpage.js"></script>
+            <script src="/js/homepage.js"></script>
 		{# Include template-specific javascript files by extending the js block #}
 		{%- block js -%}{%- endblock -%}
 	</body>

@@ -73,6 +73,7 @@ keystone.set('email locals', {
 	}
 });
 
+
 // Setup replacement rules for emails, to automate the handling of differences
 // between development a production.
 
