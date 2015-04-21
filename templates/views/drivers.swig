@@ -24,11 +24,8 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-		{# Include template-specific stylesheets by extending the css block #}
-		{%- block css %}{% endblock -%}
+		<link href="/styles/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-		{# Add any other template-specific HEAD tags by extending the head block #}
-		{%- block head %}{% endblock %}
 	</head>
 	<body>
 
@@ -104,12 +101,33 @@
             </form>
 			<div id="dvDrivers" class="row">
 				{%- for driver in drivers -%}
-                <div class="col-lg-4">
-                  <img class="img-rounded" src="{{ driver.imgUrl }}" alt="Generic placeholder image" width="220" height="160">
-                  <h2>{{ driver.name.last }} {{ driver.name.first }}</h2>
-                  <p>{{ driver.description }}</p>
-                  <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
-                </div>
+                <div class="col-lg-3 col-sm-6">
+					<div class="card hovercard">
+						<div class="cardheader">
+
+						</div>
+						<div class="avatar">
+							<img alt="avatar" src="{{ driver.imgUrl }}">
+						</div>
+						<div class="info">
+							<div class="title">
+								<a href="#">{{ driver.name.last }} {{ driver.name.first }}</a>
+							</div>
+							<div class="desc">{{ driver.description }}</div>
+						</div>
+						<div class="bottom">
+							<a class="btn circle-btn btn-primary btn-twitter btn-sm" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email xxx">
+								<i class="fa fa-phone"></i>
+							</a>
+							<a class="btn circle-btn btn-danger btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email xxx">
+								<i class="fa fa-envelope"></i>
+							</a>
+							<a class="btn circle-btn btn-primary btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email zxx">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</div>
+					</div>
+				</div>
                 {%- endfor %}
             </div>
 		</div>

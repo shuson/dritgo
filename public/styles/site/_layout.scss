@@ -39,8 +39,8 @@ body{
 
 #driver-footer{
     background-color:aliceblue;
-    position: relative;
-    height: 100px;
+    position: fixed;
+    bottom: 0;
     clear:both;
     width: 100%;
     padding-top:20px;
