@@ -116,13 +116,13 @@
 							<div class="desc">{{ driver.description }}</div>
 						</div>
 						<div class="bottom">
-							<a class="btn circle-btn btn-primary btn-twitter btn-sm" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email xxx">
+							<a class="btn circle-btn btn-primary btn-twitter btn-sm" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{{driver.phone}}">
 								<i class="fa fa-phone"></i>
 							</a>
-							<a class="btn circle-btn btn-danger btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email xxx">
+							<a class="btn circle-btn btn-danger btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="{{driver.email}}">
 								<i class="fa fa-envelope"></i>
 							</a>
-							<a class="btn circle-btn btn-primary btn-sm youtube" rel="publisher" href="{{driver.videoUrl}}" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email zxx">
+							<a class="btn circle-btn btn-primary btn-sm youtube" href="{{driver.videoUrl}}">
 								<i class="fa fa-youtube"></i>
 							</a>
 						</div>

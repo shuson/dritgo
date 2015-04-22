@@ -44,19 +44,19 @@
         <div class="item active">
           <img src="/images/bg1.jpg" alt="name1">
           <div class="carousel-caption">
-            name1
+            
           </div>
         </div>
         <div class="item">
           <img src="/images/bg2.jpg" alt="name2">
           <div class="carousel-caption">
-            name2
+            
           </div>
         </div>
         <div class="item">
           <img src="/images/bg3.jpg" alt="name3">
           <div class="carousel-caption">
-            name3
+            
           </div>
         </div>
       </div>
