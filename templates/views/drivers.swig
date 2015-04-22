@@ -75,7 +75,8 @@
 		{# BODY #}
 		<div id="driver-body">
             <form class="row" action="/find" method="POST">
-                <div class='col-md-3 col-md-offset-3'> 
+                <!--search by period -->
+                <!-- div class='col-md-3 col-md-offset-3'> 
                     <div class='input-group date' id='dateFrom'>
                         <span class="input-group-addon">
                             From: 
@@ -96,10 +97,18 @@
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
+                </div -->
+                <!-- search by driver information keyword -->
+                <div class='col-md-4 col-md-offset-4'>
+                    <input id="keyword" type='text' name="keyword" value="{{keyword}}" class="form-control" placeholder="Driver's name; Language ..." />
                 </div>
                 <button id="find" type="submit" class="btn btn-default">Find</button>
             </form>
 			<div id="dvDrivers" class="row">
+                {% if !drivers.length %}
+                    <h2>No record found, please change other keyword!</h2>
+                {% endif %}
+                
 				{%- for driver in drivers -%}
                 <div class="col-lg-4 col-sm-6">
 					<div class="card hovercard">
@@ -136,7 +145,7 @@
 		<div id="driver-footer" class="container">
 			{# You don"t _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it! #}      <div class="row">
                 <div class="col-md-4">
-                    <p>Contact us via <a href="mailto:wlgq@hotmail.com" target="_blank">Email</a>.</p>
+                    <p>Join the drivers' list? Contact us via <a href="mailto:aislinn.chenya@gmail.com" target="_blank">Email</a>.</p>
                 </div>
                 <div class="col-md-4">
                 

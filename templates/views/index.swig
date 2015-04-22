@@ -5,7 +5,8 @@
         <div class="carousel-cta">
             <h2 id="welcome">Welcome, look for a driver:</h2>
             <form action="/find" method="POST">
-                <div class='col-md-3 col-md-offset-3'> 
+                <!--search by period -->
+                <!--div class='col-md-3 col-md-offset-3'> 
                     <div class='input-group date' id='dateFrom'>
                         <span class="input-group-addon">
                             From: 
@@ -26,6 +27,10 @@
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
+                </div-->
+                <!-- search by driver information keyword -->
+                <div class='col-md-4 col-md-offset-4'>
+                    <input id="keyword" type='text' name="keyword" class="form-control" placeholder="Driver's name; Language ..." />
                 </div>
                 <button id="find" type="submit" class="btn btn-default">Find</button>
             </form>
