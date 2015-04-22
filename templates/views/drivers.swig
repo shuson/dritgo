@@ -181,7 +181,6 @@
 
 		{# Add scripts that are globally required by your site here. #}
             <script src="/js/driverpage.js"></script>
-            <script src="/js/homepage.js"></script>
 		{# Include template-specific javascript files by extending the js block #}
 		{%- block js -%}{%- endblock -%}
 	</body>

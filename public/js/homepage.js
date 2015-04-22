@@ -11,7 +11,7 @@ $(function(){
 
     //search submit
     $("#find").click(function(){
-        /*
+        
         var result = ($("#inputDateFrom").val() && $("#inputDateTo").val()) || false;
         if(!result){
             $("#dateFrom").addClass("requiredErr");
@@ -19,15 +19,6 @@ $(function(){
         }else{
             $("#dateFrom").removeClass("requiredErr");
             $("#dateTo").removeClass("requiredErr");
-        }
-        */
-        
-        var result = $("#keyword").val() || false;
-        
-        if(!result){
-            $("#keyword").addClass("requiredErr");
-        }else{
-            $("#keyword").removeClass("requiredErr");
         }
         
         return result;
