@@ -1,19 +1,5 @@
 $(function(){
-    Vue.config.delimiters = ['(%', '%)']
-    
-    var driverVue = new Vue({
-        el: "#dvDrivers"
+    $(function () {
+        $(".youtube").YouTubeModal({autoplay:0, width:640, height:480});
     });
-    /*
-    $.ajax({
-    	type: 'GET',
-    	url: "/driver",
-    	dataType: 'json',
-    	success: function (result, textStatus, jqXHR) {
-			console.log(result);
-			driverVue.$data = {
-				drivers: result
-			}		
-		},
-    });*/
 });

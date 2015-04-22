@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title>{{ title|default("dritgo") }}</title>
+		<title>{{ title|default("Find a Driver in Cambodia") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		<link href="/styles/site.css" rel="stylesheet">
@@ -43,7 +43,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a id='logo' class="navbar-brand" href="/">dritgo</a>
+						<a id='logo' class="navbar-brand" href="/">Home</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-left">
@@ -60,7 +60,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							{% if user -%}
 								{%- if user.canAccessKeystone -%}
-									<li><a href="/keystone">Open Keystone</a></li>
+									<li><a href="/keystone">Open Admin Panel</a></li>
 								{%- endif -%}
 								<li><a href="/keystone/signout">Sign Out</a></li>
 							{%- else -%}
@@ -122,7 +122,7 @@
 							<a class="btn circle-btn btn-danger btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email xxx">
 								<i class="fa fa-envelope"></i>
 							</a>
-							<a class="btn circle-btn btn-primary btn-sm" rel="publisher" role="button" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email zxx">
+							<a class="btn circle-btn btn-primary btn-sm youtube" rel="publisher" href="{{driver.videoUrl}}" data-container="body" data-toggle="popover" data-placement="bottom" data-content="email zxx">
 								<i class="fa fa-youtube"></i>
 							</a>
 						</div>
@@ -162,6 +162,7 @@
         <script src="/js/lib/moment.min.js"></script>
         <script src="/js/lib/vue.min.js"></script>
         <script src="/js/lib/bootstrap/bootstrap-datetimepicker.min.js"></script>
+        <script src="/js/lib/bootstrap/bootstrap-popupyoutube.min.js"></script>
 
 		{# The KeystoneJS Content Editor provides support for ks-editable data attributes,
 			which generate links to edit content for users who can access Keystone #}

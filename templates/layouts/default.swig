@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title>{{ title|default("dritgo") }}</title>
+		<title>{{ title|default("Find a Driver in Cambodia") }}</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		{# Customise the stylesheet for your site by editing /public/styles/site.sass #}
@@ -48,7 +48,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<a id='logo' class="navbar-brand" href="/">dritgo</a>
+						<a id='logo' class="navbar-brand" href="/">Home</a>
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-left">
@@ -65,7 +65,7 @@
 						<ul class="nav navbar-nav navbar-right">
 							{% if user -%}
 								{%- if user.canAccessKeystone -%}
-									<li><a href="/keystone">Open Keystone</a></li>
+									<li><a href="/keystone">Open Admin Panel</a></li>
 								{%- endif -%}
 								<li><a href="/keystone/signout">Sign Out</a></li>
 							{%- else -%}

@@ -4815,14 +4815,12 @@ body {
   min-height: 10%;
   margin-top: 0;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
 
 #body {
-  background: url("../../images/bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-  padding-top: 50px; }
+  background: no-repeat center center fixed;
+  background-size: cover; }
 
 #driver-body {
   width: 100%;
@@ -4857,8 +4855,33 @@ body {
 .requiredErr {
   border: 1px solid red; }
 
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%;
+  height: 100vh;
+  margin: auto; }
+
+.carousel-cta {
+  font-size: 18px;
+  width: 100%; }
+
+.carousel-copy {
+  position: absolute;
+  top: 20%;
+  bottom: auto;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2; }
+
+.carousel-cta h2 {
+  margin-left: 10%; }
+
 a {
   color: black; }
+
+a:hover {
+  color: blue; }
 
 #dvDrivers {
   margin: 5% 15%; }
