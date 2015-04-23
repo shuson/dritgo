@@ -11,7 +11,7 @@
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 		<link href="/styles/site.css" rel="stylesheet">
-        <link href="/styles/lib/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link href="/styles/bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 		{%- if user and user.canAccessKeystone -%}
 			<link href="/keystone/styles/content/editor.min.css" rel="stylesheet">
