@@ -12,7 +12,7 @@
 
 		{# Customise the stylesheet for your site by editing /public/styles/site.sass #}
 		<link href="/styles/site.css" rel="stylesheet">
-        <link href="/styles/lib/bootstrap-datetimepicker.min.css" rel="stylesheet">
+        <link href="/styles/bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
 		{# This file provides the default styling for the KeystoneJS Content Editor #}
 		{%- if user and user.canAccessKeystone -%}

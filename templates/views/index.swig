@@ -36,7 +36,7 @@
             </form>
         </div>
     </div>
-    <div id="carousel-homepage" class="carousel slide" data-ride="carousel">
+    <div id="carousel-homepage" class="carousel slide">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-homepage" data-slide-to="0" class="active"></li>

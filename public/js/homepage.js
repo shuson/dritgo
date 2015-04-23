@@ -24,3 +24,9 @@ $(function(){
         return result;
     });
 })
+
+$(window).load(function(){
+    $('.carousel').carousel({
+      interval: 5000
+    })
+});
