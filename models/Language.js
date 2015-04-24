@@ -1,7 +1,7 @@
 var keystone = require('keystone'),
 	Types = keystone.Field.Types;
 /**
- * Driver Model
+ * Language Model
  * ==========
  */
 
