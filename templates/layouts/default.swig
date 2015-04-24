@@ -62,7 +62,7 @@
 								</li>
 							{%- endfor %}
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
+						<!-- ul class="nav navbar-nav navbar-right">
 							{% if user -%}
 								{%- if user.canAccessKeystone -%}
 									<li><a href="/keystone">Open Admin Panel</a></li>
@@ -71,7 +71,7 @@
 							{%- else -%}
 								<li><a href="/keystone/signin">Sign In</a></li>
 							{%- endif %}
-						</ul>
+						</ul -->
 					</div>
 				</div>
 			</div>
