@@ -120,7 +120,7 @@
 						</div>
 						<div class="info">
 							<div class="title">
-								<a href="#">{{ driver.name.last }} {{ driver.name.first }}</a>
+								<a href="/driver/{{ driver.id }}">{{ driver.name.last }} {{ driver.name.first }}</a>
 							</div>
 							<div class="desc">{{ driver.description }}</div>
 						</div>
