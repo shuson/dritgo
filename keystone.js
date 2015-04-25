@@ -4,7 +4,8 @@ require('dotenv').load();
 
 // Require keystone
 var keystone = require('keystone'),
-	swig = require('swig');
+	swig = require('swig'),
+    baucis = require('baucis');
 
 // Disable swig's bulit-in template caching, express handles it
 swig.setDefaults({ cache: false });
