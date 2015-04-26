@@ -53,9 +53,15 @@ exports = module.exports = function(app) {
 	
 	app.post('/find', routes.views.drivers);
     
-    	app.get('/driver/:id', routes.views.driver);
+    app.get('/driver/:id', routes.views.driver);
     
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	
+    // RESTful APIs
+    //inital res.apiResponse and apiErr
+    app.all('/api*', keystone.middleware.api);
+    
+    app.get('/api/driver/list', routes.apis.driver.list);
+    app.get('/api/driver/:id', routes.apis.driver.get);
 };
