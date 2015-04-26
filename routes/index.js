@@ -64,4 +64,13 @@ exports = module.exports = function(app) {
     
     app.get('/api/driver/list', routes.apis.driver.list);
     app.get('/api/driver/:id', routes.apis.driver.get);
+    
+    app.get('/api/language/list', routes.apis.language.list);
+    app.get('/api/language/:id', routes.apis.language.get);
+    
+    app.get('/api/vehicle/list', routes.apis.vehicle.list);
+    app.get('/api/vehicle/:id', routes.apis.vehicle.get);
+    
+    app.get('/api/area/list', routes.apis.area.list);
+    app.get('/api/area/:id', routes.apis.area.get);
 };

@@ -1,44 +1,44 @@
 var keystone = require('keystone');
 
-var Driver = keystone.list('Driver');
+var Model = keystone.list('Language');
 
 /**
- * List Drivers
+ * List Languages
  */
 exports.list = function(req, res) {
-	Driver.model.find(function(err, items) {
+	Model.model.find(function(err, items) {
 		
 		if (err) return res.apiError('error', err);
 		
 		res.apiResponse ({
-			drivers: items
+			languages: items
 		});
 		
 	});
 }
 
 /**
- * Get Driver by ID
+ * Get Language by ID
  */
 exports.get = function(req, res) {
-	Driver.model.findById(req.params.id).exec(function(err, item) {
+	Model.model.findById(req.params.id).exec(function(err, item) {
 		
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
 		
 		res.apiResponse ({
-			driver: item
+			language: item
 		});
 		
 	});
 }
 
 /**
- * Create a Driver
+ * Create a Language
  */
 exports.create = function(req, res) {
 	
-	var item = new Driver.model(),
+	var item = new Model.model(),
 		data = (req.method == 'POST') ? req.body : req.query;
 	
 	item.getUpdateHandler(req).process(data, function(err) {
@@ -46,17 +46,17 @@ exports.create = function(req, res) {
 		if (err) return res.apiError('error', err);
 		
 		res.apiResponse({
-			driver: item
+			language: item
 		});
 		
 	});
 }
 
 /**
- * Update Driver by ID
+ * Update Language by ID
  */
 exports.update = function(req, res) {
-	Driver.model.findById(req.params.id).exec(function(err, item) {
+	Model.model.findById(req.params.id).exec(function(err, item) {
 		
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
@@ -68,7 +68,7 @@ exports.update = function(req, res) {
 			if (err) return res.apiError('update error', err);
 			
 			res.apiResponse({
-				driver: item
+				language: item
 			});
 			
 		});
@@ -80,7 +80,7 @@ exports.update = function(req, res) {
  * Delete Language by ID
  */
 exports.remove = function(req, res) {
-	Driver.model.findById(req.params.id).exec(function (err, item) {
+	Model.model.findById(req.params.id).exec(function (err, item) {
 		
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
