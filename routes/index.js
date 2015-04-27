@@ -1,19 +1,19 @@
 /**
  * This file is where you define your application routes and controllers.
- * 
+ *
  * Start by including the middleware you want to run for every request;
  * you can attach middleware to the pre('routes') and pre('render') events.
- * 
+ *
  * For simplicity, the default setup for route controllers is for each to be
  * in its own file, and we import all the files in the /routes/views directory.
- * 
+ *
  * Each of these files is a route controller, and is responsible for all the
  * processing that needs to happen for the route (e.g. loading data, handling
  * form submissions, rendering the view template, etc).
- * 
+ *
  * Bind each route pattern your application should respond to in the function
  * that is exported from this module, following the examples below.
- * 
+ *
  * See the Express application routing documentation for more information:
  * http://expressjs.com/api.html#app.VERB
  */
@@ -34,7 +34,7 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
-	
+
 	// Allow cross-domain requests (development only)
 	if (process.env.NODE_ENV != 'production') {
 		console.log('------------------------------------------------');
@@ -50,27 +50,27 @@ exports = module.exports = function(app) {
 
 	// Views
 	app.get('/', routes.views.index);
-	
+
 	app.post('/find', routes.views.drivers);
-    
+
     app.get('/driver/:id', routes.views.driver);
-    
+
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
-	
+
     // RESTful APIs
     //inital res.apiResponse and apiErr
     app.all('/api*', keystone.middleware.api);
-    
-    app.get('/api/driver/list', routes.apis.driver.list);
-    app.get('/api/driver/:id', routes.apis.driver.get);
-    
-    app.get('/api/language/list', routes.apis.language.list);
-    app.get('/api/language/:id', routes.apis.language.get);
-    
-    app.get('/api/vehicle/list', routes.apis.vehicle.list);
-    app.get('/api/vehicle/:id', routes.apis.vehicle.get);
-    
-    app.get('/api/area/list', routes.apis.area.list);
-    app.get('/api/area/:id', routes.apis.area.get);
+
+    app.get('/api/drivers', routes.apis.driver.list);
+    app.get('/api/drivers/:id', routes.apis.driver.get);
+
+    app.get('/api/languages', routes.apis.language.list);
+    app.get('/api/languages/:id', routes.apis.language.get);
+
+    app.get('/api/vehicles', routes.apis.vehicle.list);
+    app.get('/api/vehicles/:id', routes.apis.vehicle.get);
+
+    app.get('/api/areas', routes.apis.area.list);
+    app.get('/api/areas/:id', routes.apis.area.get);
 };
