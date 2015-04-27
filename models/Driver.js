@@ -22,7 +22,7 @@ Driver.add({
     language_spoken: {type: Types.Relationship, label: 'Language Spoken', ref: 'Language', many: true},
     language_written: {type: Types.Relationship, label: 'Language Written', ref: 'Language', many: true},
     vehicle: {type: Types.Relationship, label: 'Vehicle Type', ref: 'Vehicle', many: true},
-    area: {type: Types.Relationship, label: 'Areas', ref: 'Area', many: true},
+    area: {type: Types.Relationship, label: 'City', ref: 'Area', many: true},
     createdAt: { type: Date, default: Date.now },
     avaliable: { type: Types.Boolean, initial: true, required: true},
 	imgUrl: { type: Types.CloudinaryImage, publicID: 'dritgo', folder: 'images/drivers/'},
