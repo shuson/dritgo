@@ -1,7 +1,5 @@
 var keystone = require('keystone'),
-	Types = keystone.Field.Types,
-    baucis = require('baucis'),
-    swagger = require('baucis-swagger');
+	Types = keystone.Field.Types;
 
 /**
  * Language Model
