@@ -1,5 +1,5 @@
-// Simulate config options from your production environment by
-// customising the .env file in your project's root folder.
+// Simulate config options production environment by
+// customising the .env file in project's root folder.
 require('dotenv').load();
 
 // Require keystone
@@ -36,14 +36,12 @@ keystone.init({
 
 });
 
-// Load your project's Models
-
+// Load project's Models
 keystone.import('models');
 
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
-
 keystone.set('locals', {
 	_: require('underscore'),
 	env: keystone.get('env'),
@@ -51,13 +49,11 @@ keystone.set('locals', {
 	editable: keystone.content.editable
 });
 
-// Load your project's Routes
-
+// Load project's Routes
 keystone.set('routes', require('./routes'));
 
 // Setup common locals for your emails. The following are required by Keystone's
 // default email templates, you may remove them if you're using your own.
-
 keystone.set('email locals', {
 	logo_src: '/images/logo-email.gif',
 	logo_width: 194,
@@ -93,11 +89,10 @@ keystone.set('email rules', [{
 keystone.set('email tests', require('./routes/emails'));
 
 // Configure the navigation bar in Keystone's Admin UI
-
 keystone.set('nav', {
 	'users': 'users',
 	'drivers': 'drivers',
-    'others': ['languages', 'vehicles', 'areas']
+	'others': ['languages', 'vehicles', 'areas']
 });
 
 // Start Keystone to connect to your database and initialise the web server
