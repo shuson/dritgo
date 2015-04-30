@@ -15,7 +15,7 @@ Driver.add({
     nickname: {type: Types.Text, initial: true, label: 'Preferred Name'},
 	email: { type: Types.Email, initial: true, required: true, index: true },
     phone: { type: Types.Text, initial: true, required: true },
-    address: { type: Types.Location, initial: true, required: true},
+    //address: { type: Types.Location, initial: true, required: true},
     short_desc: { type: Types.Text, label: 'Short Description', initial: true },
 	description: { type: Types.Textarea, label: 'Long Description', initial: true },
     driving_years: { type: Types.Number, label: 'Driving Years', initial: true },
