@@ -6,7 +6,7 @@ var Driver = keystone.list('Driver');
  * List Drivers
  */
 exports.list = function(req, res) {
-	Driver.model.find(function(err, items) {
+	Driver.model.find().populate('language_spoken language_written vehicle area').exec(function(err, items) {
 		
 		if (err) return res.apiError('error', err);
 		
@@ -25,11 +25,28 @@ exports.get = function(req, res) {
 		
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
+
+		res.apiResponse ({
+			driver: item
+		});
+		
+	});
+}
+
+/**
+ * Get Driver Beautifully by ID
+ */
+exports.getBeautifully = function(req, res) {
+	Driver.model.findById(req.params.id).populate('language_spoken language_written vehicle area').exec(function(err, item) {
+		
+		if (err) return res.apiError('database error', err);
+		if (!item) return res.apiError('not found');
 		
 		res.apiResponse ({
 			driver: item
 		});
 		
+
 	});
 }
 

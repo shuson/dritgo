@@ -63,7 +63,7 @@ exports = module.exports = function(app) {
     app.all('/api*', keystone.middleware.api);
 
     app.get('/api/drivers', routes.apis.driver.list);
-    app.get('/api/drivers/:id', routes.apis.driver.get);
+    app.get('/api/drivers/:id', routes.apis.driver.getBeautifully);
 
     app.get('/api/languages', routes.apis.language.list);
     app.get('/api/languages/:id', routes.apis.language.get);
