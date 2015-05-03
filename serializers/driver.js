@@ -15,6 +15,8 @@ exports.to_json = function(object) {
     description:        object.description,
     phone:              object.phone,
     email:              object.email,
+    available:          object.available,
+    driving_years:      object.driving_years,
     source_url:         object.driverSourceUrl,
     avatar_url:         object.imgUrl.url,
     video_url:          object.videoUrl,
