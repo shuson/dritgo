@@ -22,34 +22,19 @@ exports.list = function(req, res) {
 }
 
 /**
- * Get Driver by ID
+ * Find a Driver by ID
  */
-exports.get = function(req, res) {
-	Driver.model.findById(req.params.id).exec(function(err, item) {
-
-		if (err) return res.apiError('database error', err);
-		if (!item) return res.apiError('not found');
-
-		res.apiResponse ({
-			driver: item
-		});
-
-	});
-}
-
-/**
- * Get Driver Beautifully by ID
- */
-exports.getBeautifully = function(req, res) {
+exports.find= function(req, res) {
 	Driver.model.findById(req.params.id).populate('language_spoken language_written vehicle area').exec(function(err, item) {
 
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
 
-		res.apiResponse ({
-			driver: item
-		});
+    var data = DriverSerializer.to_json(item);
 
+		res.apiResponse ({
+			driver: data
+		});
 
 	});
 }

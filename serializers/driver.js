@@ -1,5 +1,4 @@
 exports.to_json = function(object) {
-
   var cities    = (object.area != undefined) ? object.area.map(function(item){ return item.name; }) : [] ;
   var vehicles  = (object.vehicle != undefined) ? object.vehicle.map(function(item){ return item.name; }) : [] ;
   var languages_written = (object.language_written != undefined) ? object.language_written.map(function(item) { return item.name; }) : [] ;
