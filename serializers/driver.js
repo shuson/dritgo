@@ -18,6 +18,7 @@ exports.to_json = function(object) {
     driving_years:      object.driving_years,
     source_url:         object.driverSourceUrl,
     avatar_url:         object.imgUrl.url,
+    background_url:     object.bgImgUrl.url,
     video_url:          object.videoUrl,
     facebook_url:       object.facebook,
     wechat_id:          object.wechat,
